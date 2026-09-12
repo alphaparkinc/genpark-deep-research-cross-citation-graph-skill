@@ -1,0 +1,50 @@
+{
+  "name": "genpark-deep-research-cross-citation-graph-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Deep research multi-source cross-citation graph analyzer detecting circular references, ranking evidence authority, and resolving knowledge consensus.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "deep-research",
+  "tags": [
+    "deep-research",
+    "citation-graph",
+    "consensus-verification",
+    "fact-checking",
+    "evidence-graph"
+  ],
+  "inputs": {
+    "topic": {
+      "type": "string",
+      "default": "State of Humanoid Robotics Actuators 2026"
+    },
+    "source_urls": {
+      "type": "array",
+      "default": [
+        "https://arxiv.org/abs/2601.091",
+        "https://ieee.org/robotics/2026"
+      ]
+    }
+  },
+  "outputs": {
+    "graph_id": {
+      "type": "string"
+    },
+    "nodes_count": {
+      "type": "integer"
+    },
+    "citation_edges_count": {
+      "type": "integer"
+    },
+    "authority_weighted_score": {
+      "type": "number"
+    },
+    "circular_references_detected": {
+      "type": "boolean"
+    },
+    "graph_telemetry_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
